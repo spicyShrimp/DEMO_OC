@@ -85,7 +85,6 @@
 #pragma mark --UITextFieldDelegate--
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     NSLog(@"%s",__FUNCTION__);
-    [textField becomeFirstResponder];
     return YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -93,7 +92,6 @@
 }
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     NSLog(@"%s",__FUNCTION__);
-    [textField resignFirstResponder];
     return YES;
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
@@ -112,7 +110,6 @@
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     NSLog(@"%s",__FUNCTION__);
-    [textField resignFirstResponder];
     return YES;
 }
 - (void)didReceiveMemoryWarning {
