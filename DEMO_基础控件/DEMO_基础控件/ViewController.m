@@ -68,8 +68,62 @@
     textField.placeholder = @"请输入文字";//占位符
     textField.clearsOnBeginEditing = YES;//开始输入是否清空文字
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;//清空按钮显示模式
-    textField.delegate = self;
-    [self.view addSubview:textField];
+    textField.delegate = self;//设置代理
+    [self.view addSubview:textField];//添加textField
+    
+    //UISlider
+    UISlider *slider = [[UISlider alloc]init];//初始化
+    slider.frame = CGRectMake(0, 250, 200, 30);//位置
+    slider.minimumValue = 0;//最小值
+    slider.maximumValue = 1;//最大值
+    slider.value = 0.5;//当前值
+    [slider setThumbImage:[UIImage imageNamed:@"favorite"] forState:UIControlStateNormal];//设置滑块图片
+    slider.continuous = YES;//valuechange是否全部返回
+    [slider addTarget:self action:@selector(sliderValueChange:) forControlEvents:UIControlEventValueChanged];//添加滑动事件
+    [self.view addSubview:slider];//添加slider
+    
+    //UISwitch
+    UISwitch *aswitch = [[UISwitch alloc]init];//初始化
+    aswitch.frame = CGRectMake(0, 290, 60, 30);//位置
+    aswitch.backgroundColor = [UIColor blueColor];//背景色
+    aswitch.onTintColor = [UIColor redColor];//打开时颜色
+    aswitch.tintColor = [UIColor greenColor];//关闭时颜色
+    aswitch.thumbTintColor = [UIColor yellowColor];//按钮颜色
+    [aswitch setOn:YES animated:YES];//设置是否打开
+    [aswitch addTarget:self action:@selector(switchValueChange:) forControlEvents:UIControlEventValueChanged];//添加选择事件
+    [self.view addSubview:aswitch];//添加switch
+    
+    //UIActivityIndicatorView
+    UIActivityIndicatorView *actView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];//初始化
+    actView.frame = CGRectMake(0, 330, 50, 50);//位置
+    actView.hidesWhenStopped = YES;//停止时是否隐藏
+    [actView startAnimating];//开始动画
+    [self.view addSubview:actView];//添加actView
+    
+    //UIProgressView
+    UIProgressView *progress = [[UIProgressView alloc]init];//初始化
+    progress.frame = CGRectMake(0, 390, 200, 30);//位置
+    progress.backgroundColor = [UIColor blueColor];//背景色
+    progress.progressViewStyle = UIProgressViewStyleDefault;//风格
+    progress.progressTintColor = [UIColor redColor];//已达到部分
+    progress.trackTintColor = [UIColor greenColor];//未达到部分
+    [progress setProgress:0.5 animated:YES];//设置proges的值
+    [self.view addSubview:progress];//添加progress
+    
+    //UIImageView
+    UIImageView *imageView1 = [[UIImageView alloc]init];//初始化
+    imageView1.frame = CGRectMake(0, 430, 50, 50);//位置
+    imageView1.image = [UIImage imageNamed:@"favorite"];
+    imageView1.userInteractionEnabled = YES;//是否开启用户交互
+    [self.view addSubview:imageView1];//添加imageView
+    
+    UIImageView *imageView2 = [[UIImageView alloc]init];//初始化
+    imageView2.frame = CGRectMake(0, 480, 50, 50);//位置
+    imageView2.animationImages = @[[UIImage imageNamed:@"favorite"],[UIImage imageNamed:@"background"]];//设置动画图片
+    imageView2.animationRepeatCount = 0;//动画重复次数
+    imageView2.animationDuration = 1;//动画时长
+    [imageView2 startAnimating];//开启动画
+    [self.view addSubview:imageView2];//添加imageView
 }
 
 //button点击事件
@@ -80,6 +134,16 @@
 //segment点击事件
 -(void)segmentSelect:(UISegmentedControl *)seg{
     NSLog(@"seg click %ld",(long)seg.selectedSegmentIndex);
+}
+
+//slider滑动事件
+-(void)sliderValueChange:(UISlider *)slider{
+    NSLog(@"slider value change %f",slider.value);
+}
+
+//switch选择事件
+-(void)switchValueChange:(UISwitch *)aswitch{
+    NSLog(@"switch value change %d",aswitch.isOn);
 }
 
 #pragma mark --UITextFieldDelegate--
