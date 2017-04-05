@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UITextFieldDelegate>
+@interface ViewController ()<UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
 
 @end
 
@@ -124,6 +124,35 @@
     imageView2.animationDuration = 1;//动画时长
     [imageView2 startAnimating];//开启动画
     [self.view addSubview:imageView2];//添加imageView
+    
+    //UITextView
+    UITextView *textView = [[UITextView alloc]init];//初始化
+    textView.frame = CGRectMake(0, 540, 200, 100);//位置
+    textView.backgroundColor = [UIColor whiteColor];//背景色
+    textView.text = @"i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView ";//文字
+    textView.font = [UIFont systemFontOfSize:19.0f];//字号
+    textView.textAlignment = NSTextAlignmentLeft;//对齐方式
+    textView.editable = NO;//是否可编辑
+    textView.selectable = NO;//是否可选择
+    textView.delegate = self;//设置代理
+    [self.view addSubview:textView];//添加textView
+    
+    //UIScrollView
+    UIScrollView *scroll = [[UIScrollView alloc]init];
+    scroll.frame = CGRectMake(200, 20, 100, 100);
+    scroll.backgroundColor = [UIColor redColor];
+    for (int i=0; i<3; i++) {
+        UIView *subView = [[UIView alloc]initWithFrame:CGRectMake(i*100, 0, 100, 200)];
+        subView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];
+        [scroll addSubview:subView];
+    }
+    scroll.pagingEnabled = YES;//是否滑动一页
+    scroll.contentSize = CGSizeMake(300, 200);//滑动范围
+    scroll.bounces = YES;//是否有回弹效果
+    scroll.showsHorizontalScrollIndicator = YES;//是否显示横向滑动条
+    scroll.showsVerticalScrollIndicator = YES;//是否显示纵向滑动条
+    scroll.delegate = self;//设置代理
+    [self.view addSubview:scroll];//添加scroll
 }
 
 //button点击事件
@@ -176,6 +205,94 @@
     NSLog(@"%s",__FUNCTION__);
     return YES;
 }
+
+
+#pragma mark --UITextViewDelegate--
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    NSLog(@"%s",__FUNCTION__);
+    return YES;
+}
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView{
+    NSLog(@"%s",__FUNCTION__);
+    return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)textViewDidEndEditing:(UITextView *)textView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    NSLog(@"%s",__FUNCTION__);
+    return YES;
+}
+- (void)textViewDidChange:(UITextView *)textView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)textViewDidChangeSelection:(UITextView *)textView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction{
+    NSLog(@"%s",__FUNCTION__);
+    return YES;
+}
+- (BOOL)textView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction{
+    NSLog(@"%s",__FUNCTION__);
+    return YES;
+}
+
+#pragma mark --UIScrollViewDelegate--
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+     NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+    return nil;
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView{
+    return YES;
+}
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
