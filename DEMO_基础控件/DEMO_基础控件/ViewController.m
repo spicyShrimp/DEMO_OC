@@ -46,6 +46,7 @@
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];//添加点击事件
     [self.view addSubview:button];//添加button
     
+    
     //UISegmentedControl
     UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:@[@"seg1",@"seg2"]];//初始化
     segment.frame = CGRectMake(0, 160, 200, 30);//位置
@@ -57,6 +58,7 @@
     [segment setEnabled:YES forSegmentAtIndex:1];//是否可以点击
     [segment addTarget:self action:@selector(segmentSelect:) forControlEvents:UIControlEventValueChanged];//添加点击事件
     [self.view addSubview:segment];//添加segment
+    
     
     //UITextField
     UITextField *textField = [[UITextField alloc]init];//初始化
@@ -71,6 +73,7 @@
     textField.delegate = self;//设置代理
     [self.view addSubview:textField];//添加textField
     
+    
     //UISlider
     UISlider *slider = [[UISlider alloc]init];//初始化
     slider.frame = CGRectMake(0, 250, 200, 30);//位置
@@ -81,6 +84,7 @@
     slider.continuous = YES;//valuechange是否全部返回
     [slider addTarget:self action:@selector(sliderValueChange:) forControlEvents:UIControlEventValueChanged];//添加滑动事件
     [self.view addSubview:slider];//添加slider
+    
     
     //UISwitch
     UISwitch *aswitch = [[UISwitch alloc]init];//初始化
@@ -93,12 +97,14 @@
     [aswitch addTarget:self action:@selector(switchValueChange:) forControlEvents:UIControlEventValueChanged];//添加选择事件
     [self.view addSubview:aswitch];//添加switch
     
+    
     //UIActivityIndicatorView
     UIActivityIndicatorView *actView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];//初始化
     actView.frame = CGRectMake(0, 330, 50, 50);//位置
     actView.hidesWhenStopped = YES;//停止时是否隐藏
     [actView startAnimating];//开始动画
     [self.view addSubview:actView];//添加actView
+    
     
     //UIProgressView
     UIProgressView *progress = [[UIProgressView alloc]init];//初始化
@@ -109,6 +115,7 @@
     progress.trackTintColor = [UIColor greenColor];//未达到部分
     [progress setProgress:0.5 animated:YES];//设置proges的值
     [self.view addSubview:progress];//添加progress
+    
     
     //UIImageView
     UIImageView *imageView1 = [[UIImageView alloc]init];//初始化
@@ -125,6 +132,7 @@
     [imageView2 startAnimating];//开启动画
     [self.view addSubview:imageView2];//添加imageView
     
+    
     //UITextView
     UITextView *textView = [[UITextView alloc]init];//初始化
     textView.frame = CGRectMake(0, 540, 200, 100);//位置
@@ -132,19 +140,19 @@
     textView.text = @"i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView i am a textView ";//文字
     textView.font = [UIFont systemFontOfSize:19.0f];//字号
     textView.textAlignment = NSTextAlignmentLeft;//对齐方式
-    textView.editable = NO;//是否可编辑
-    textView.selectable = NO;//是否可选择
+    textView.editable = YES;//是否可编辑
+    textView.selectable = YES;//是否可选择
     textView.delegate = self;//设置代理
     [self.view addSubview:textView];//添加textView
     
     //UIScrollView
-    UIScrollView *scroll = [[UIScrollView alloc]init];
-    scroll.frame = CGRectMake(200, 20, 100, 100);
+    UIScrollView *scroll = [[UIScrollView alloc]init];//初始化
+    scroll.frame = CGRectMake(200, 20, 100, 100);//位置
     scroll.backgroundColor = [UIColor redColor];
     for (int i=0; i<3; i++) {
-        UIView *subView = [[UIView alloc]initWithFrame:CGRectMake(i*100, 0, 100, 200)];
-        subView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];
-        [scroll addSubview:subView];
+        UIView *subView = [[UIView alloc]initWithFrame:CGRectMake(i*100, 0, 100, 200)];//内部视图初始化并且设置位置
+        subView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];//背景色
+        [scroll addSubview:subView];//添加到scrollView
     }
     scroll.pagingEnabled = YES;//是否滑动一页
     scroll.contentSize = CGSizeMake(300, 200);//滑动范围
@@ -152,6 +160,7 @@
     scroll.showsHorizontalScrollIndicator = YES;//是否显示横向滑动条
     scroll.showsVerticalScrollIndicator = YES;//是否显示纵向滑动条
     scroll.delegate = self;//设置代理
+    [scroll setContentOffset:CGPointMake(100, 0) animated:YES];//设置当前滚动到的位置
     [self.view addSubview:scroll];//添加scroll
 }
 
