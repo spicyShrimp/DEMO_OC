@@ -15,6 +15,10 @@
 		5647B7A61E9CAB880094AB4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5647B7A41E9CAB880094AB4E /* LaunchScreen.storyboard */; };
 		5647B7B11E9CAB880094AB4E /* DEMO______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5647B7B01E9CAB880094AB4E /* DEMO______Tests.m */; };
 		5647B7BC1E9CAB880094AB4E /* DEMO______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5647B7BB1E9CAB880094AB4E /* DEMO______UITests.m */; };
+		5647B7CB1E9CAC1F0094AB4E /* Boss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5647B7CA1E9CAC1F0094AB4E /* Boss.m */; };
+		5647B7CE1E9CAEB80094AB4E /* Buyer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5647B7CD1E9CAEB80094AB4E /* Buyer.m */; };
+		5647B7D11E9CAEFC0094AB4E /* Keeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5647B7D01E9CAEFC0094AB4E /* Keeper.m */; };
+		5647B7D41E9CAF1C0094AB4E /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 5647B7D31E9CAF1C0094AB4E /* Cashier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		5647B7B71E9CAB880094AB4E /* DEMO_协议和代理UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DEMO_协议和代理UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5647B7BB1E9CAB880094AB4E /* DEMO______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DEMO______UITests.m"; sourceTree = "<group>"; };
 		5647B7BD1E9CAB880094AB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5647B7C91E9CAC1F0094AB4E /* Boss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
+		5647B7CA1E9CAC1F0094AB4E /* Boss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boss.m; sourceTree = "<group>"; };
+		5647B7CC1E9CAEB80094AB4E /* Buyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buyer.h; sourceTree = "<group>"; };
+		5647B7CD1E9CAEB80094AB4E /* Buyer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buyer.m; sourceTree = "<group>"; };
+		5647B7CF1E9CAEFC0094AB4E /* Keeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keeper.h; sourceTree = "<group>"; };
+		5647B7D01E9CAEFC0094AB4E /* Keeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keeper.m; sourceTree = "<group>"; };
+		5647B7D21E9CAF1C0094AB4E /* Cashier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cashier.h; sourceTree = "<group>"; };
+		5647B7D31E9CAF1C0094AB4E /* Cashier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cashier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,14 @@
 		5647B7951E9CAB880094AB4E /* DEMO_协议和代理 */ = {
 			isa = PBXGroup;
 			children = (
+				5647B7C91E9CAC1F0094AB4E /* Boss.h */,
+				5647B7CA1E9CAC1F0094AB4E /* Boss.m */,
+				5647B7CC1E9CAEB80094AB4E /* Buyer.h */,
+				5647B7CD1E9CAEB80094AB4E /* Buyer.m */,
+				5647B7CF1E9CAEFC0094AB4E /* Keeper.h */,
+				5647B7D01E9CAEFC0094AB4E /* Keeper.m */,
+				5647B7D21E9CAF1C0094AB4E /* Cashier.h */,
+				5647B7D31E9CAF1C0094AB4E /* Cashier.m */,
 				5647B7991E9CAB880094AB4E /* AppDelegate.h */,
 				5647B79A1E9CAB880094AB4E /* AppDelegate.m */,
 				5647B79C1E9CAB880094AB4E /* ViewController.h */,
@@ -273,6 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5647B7CB1E9CAC1F0094AB4E /* Boss.m in Sources */,
+				5647B7D11E9CAEFC0094AB4E /* Keeper.m in Sources */,
+				5647B7CE1E9CAEB80094AB4E /* Buyer.m in Sources */,
+				5647B7D41E9CAF1C0094AB4E /* Cashier.m in Sources */,
 				5647B79E1E9CAB880094AB4E /* ViewController.m in Sources */,
 				5647B79B1E9CAB880094AB4E /* AppDelegate.m in Sources */,
 				5647B7981E9CAB880094AB4E /* main.m in Sources */,

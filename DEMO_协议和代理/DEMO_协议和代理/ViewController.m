@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Boss.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong)Boss *laowang;
 
 @end
 
@@ -17,8 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _laowang = [[Boss alloc]init];
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
