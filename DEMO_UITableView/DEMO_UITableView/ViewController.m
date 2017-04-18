@@ -38,7 +38,7 @@
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];//创建对象
     _tableView.delegate = self;//遵循UITableViewDelegate
     _tableView.dataSource = self;//遵循UITableViewDataSource
-    [_tableView setEditing:YES animated:YES];
+    _tableView.editing = YES;
     [self.view addSubview:_tableView];//添加到视图中
 }
 
@@ -56,12 +56,15 @@
 }
 //tableview的每一行
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //    UITableViewCell *cell = [[UITableViewCell alloc]init];
     static NSString *cellid = @"cellid";//静态的一个重用id
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];//根据id从缓存池中获取cell
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];//如果没有获取成功,则手动创建一个cell 重用id为敌营的id
+        cell.tag = indexPath.row;
     }
     cell.textLabel.text = _dataArray[indexPath.row];//系统cell默认的文本框.可以直接赋值,从数组中取出对应的行的数据
+//    cell.textLabel.text = [NSString stringWithFormat:@"我是在第%ld行创建的",(long)cell.tag];
     return cell;//返回每行构建成功的cell
 }
 
