@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MyTableViewCell.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UITableView *tableView;
@@ -54,13 +55,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataArray.count;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
+}
+
 //tableview的每一行
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //    UITableViewCell *cell = [[UITableViewCell alloc]init];
     static NSString *cellid = @"cellid";//静态的一个重用id
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];//根据id从缓存池中获取cell
+    MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];//根据id从缓存池中获取cell
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];//如果没有获取成功,则手动创建一个cell 重用id为敌营的id
+        cell = [[MyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];//如果没有获取成功,则手动创建一个cell 重用id为敌营的id
         cell.tag = indexPath.row;
     }
     cell.textLabel.text = _dataArray[indexPath.row];//系统cell默认的文本框.可以直接赋值,从数组中取出对应的行的数据

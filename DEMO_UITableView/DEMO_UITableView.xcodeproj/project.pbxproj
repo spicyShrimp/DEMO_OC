@@ -15,6 +15,7 @@
 		560022A01EA5B31F009FAC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5600229E1EA5B31F009FAC28 /* LaunchScreen.storyboard */; };
 		560022AB1EA5B31F009FAC28 /* DEMO_UITableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 560022AA1EA5B31F009FAC28 /* DEMO_UITableViewTests.m */; };
 		560022B61EA5B31F009FAC28 /* DEMO_UITableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 560022B51EA5B31F009FAC28 /* DEMO_UITableViewUITests.m */; };
+		560022C51EA5E57A009FAC28 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 560022C41EA5E57A009FAC28 /* MyTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		560022B11EA5B31F009FAC28 /* DEMO_UITableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMO_UITableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		560022B51EA5B31F009FAC28 /* DEMO_UITableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMO_UITableViewUITests.m; sourceTree = "<group>"; };
 		560022B71EA5B31F009FAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560022C31EA5E57A009FAC28 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		560022C41EA5E57A009FAC28 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				560022941EA5B31F009FAC28 /* AppDelegate.m */,
 				560022961EA5B31F009FAC28 /* ViewController.h */,
 				560022971EA5B31F009FAC28 /* ViewController.m */,
+				560022C31EA5E57A009FAC28 /* MyTableViewCell.h */,
+				560022C41EA5E57A009FAC28 /* MyTableViewCell.m */,
 				560022991EA5B31F009FAC28 /* Main.storyboard */,
 				5600229C1EA5B31F009FAC28 /* Assets.xcassets */,
 				5600229E1EA5B31F009FAC28 /* LaunchScreen.storyboard */,
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				560022981EA5B31F009FAC28 /* ViewController.m in Sources */,
+				560022C51EA5E57A009FAC28 /* MyTableViewCell.m in Sources */,
 				560022951EA5B31F009FAC28 /* AppDelegate.m in Sources */,
 				560022921EA5B31F009FAC28 /* main.m in Sources */,
 			);
@@ -509,6 +515,7 @@
 				560022BC1EA5B31F009FAC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		560022BD1EA5B31F009FAC28 /* Build configuration list for PBXNativeTarget "DEMO_UITableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +524,7 @@
 				560022BF1EA5B31F009FAC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		560022C01EA5B31F009FAC28 /* Build configuration list for PBXNativeTarget "DEMO_UITableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +533,7 @@
 				560022C21EA5B31F009FAC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
