@@ -39,6 +39,19 @@
     NSLog(@"%@",singleton6);
     
     
+    //系统常用的一些单例
+    UIApplication *application = [UIApplication sharedApplication];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    
+    NSURLCache *cache = [NSURLCache sharedURLCache];
+    
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    
 }
 
 
