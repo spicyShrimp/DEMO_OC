@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DemoSingleton.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    DemoSingleton *singleton1 = [DemoSingleton sharedDemoSingleton];
+    NSLog(@"%@",singleton1);
+    
+    DemoSingleton *singleton2 = [[DemoSingleton alloc]init];
+    NSLog(@"%@",singleton2);
+    
+    DemoSingleton *singLeton3 = [singleton2 copy];
+    NSLog(@"%@",singLeton3);
+    
+    DemoSingleton *singLeton4 = [DemoSingleton allocWithZone:nil];
+    NSLog(@"%@",singLeton4);
+    
 }
 
 

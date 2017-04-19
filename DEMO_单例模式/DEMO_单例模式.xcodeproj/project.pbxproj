@@ -15,6 +15,7 @@
 		56867F0C1EA701BC00557E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56867F0A1EA701BC00557E09 /* LaunchScreen.storyboard */; };
 		56867F171EA701BC00557E09 /* DEMO_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56867F161EA701BC00557E09 /* DEMO_____Tests.m */; };
 		56867F221EA701BC00557E09 /* DEMO_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56867F211EA701BC00557E09 /* DEMO_____UITests.m */; };
+		56867F321EA703DC00557E09 /* DemoSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 56867F311EA703DC00557E09 /* DemoSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		56867F1D1EA701BC00557E09 /* DEMO_单例模式UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DEMO_单例模式UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56867F211EA701BC00557E09 /* DEMO_____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DEMO_____UITests.m"; sourceTree = "<group>"; };
 		56867F231EA701BC00557E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56867F2F1EA702B700557E09 /* XLXSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLXSingleton.h; sourceTree = "<group>"; };
+		56867F301EA703DC00557E09 /* DemoSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSingleton.h; sourceTree = "<group>"; };
+		56867F311EA703DC00557E09 /* DemoSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,9 @@
 		56867EFB1EA701BC00557E09 /* DEMO_单例模式 */ = {
 			isa = PBXGroup;
 			children = (
+				56867F2F1EA702B700557E09 /* XLXSingleton.h */,
+				56867F301EA703DC00557E09 /* DemoSingleton.h */,
+				56867F311EA703DC00557E09 /* DemoSingleton.m */,
 				56867EFF1EA701BC00557E09 /* AppDelegate.h */,
 				56867F001EA701BC00557E09 /* AppDelegate.m */,
 				56867F021EA701BC00557E09 /* ViewController.h */,
@@ -275,6 +282,7 @@
 			files = (
 				56867F041EA701BC00557E09 /* ViewController.m in Sources */,
 				56867F011EA701BC00557E09 /* AppDelegate.m in Sources */,
+				56867F321EA703DC00557E09 /* DemoSingleton.m in Sources */,
 				56867EFE1EA701BC00557E09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
