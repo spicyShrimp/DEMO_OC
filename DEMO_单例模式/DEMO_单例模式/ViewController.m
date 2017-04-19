@@ -23,14 +23,21 @@
     DemoSingleton *singleton1 = [DemoSingleton sharedDemoSingleton];
     NSLog(@"%@",singleton1);
     
-    DemoSingleton *singleton2 = [[DemoSingleton alloc]init];
+    DemoSingleton *singleton2 = [DemoSingleton sharedDemoSingleton];
     NSLog(@"%@",singleton2);
     
-    DemoSingleton *singLeton3 = [singleton2 copy];
-    NSLog(@"%@",singLeton3);
+    DemoSingleton *singleton3 = [DemoSingleton allocWithZone:nil];
+    NSLog(@"%@",singleton3);
     
-    DemoSingleton *singLeton4 = [DemoSingleton allocWithZone:nil];
-    NSLog(@"%@",singLeton4);
+    DemoSingleton *singleton4 = [[DemoSingleton alloc]init];
+    NSLog(@"%@",singleton4);
+    
+    DemoSingleton *singleton5 = [singleton4 copy];
+    NSLog(@"%@",singleton5);
+    
+    DemoSingleton *singleton6 = [singleton5 mutableCopy];
+    NSLog(@"%@",singleton6);
+    
     
 }
 

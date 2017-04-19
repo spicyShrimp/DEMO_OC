@@ -13,4 +13,6 @@
 
 singleton_interface(DemoSingleton);
 
+//+(instancetype)sharedDemoSingleton;
+
 @end

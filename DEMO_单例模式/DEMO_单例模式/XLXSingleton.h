@@ -35,6 +35,10 @@ return _instance; \
 } \
 - (instancetype)copyWithZone:(NSZone *)zone{ \
 return _instance; \
+} \
+- (instancetype)mutableCopyWithZone:(NSZone *)zone{ \
+return _instance; \
 }
+
 
 #endif /* XLXSingleton_h */
