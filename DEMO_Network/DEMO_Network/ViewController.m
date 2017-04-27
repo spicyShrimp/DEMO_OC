@@ -72,7 +72,7 @@
 //    NSURLSession *session = [NSURLSession sharedSession];
 //    
 //    __weak typeof(self)weakSelf = self;
-//    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 //        NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];//解析结果
 //        NSLog(@"%@",[result descriptionWithLocale:nil]);
 //        dispatch_async(dispatch_get_main_queue(), ^{
