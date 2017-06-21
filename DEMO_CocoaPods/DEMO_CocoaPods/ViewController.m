@@ -21,6 +21,8 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:@"" parameters:nil progress:nil success:nil failure:nil];
+    
+    
 }
 
 
